@@ -21,5 +21,5 @@ output "rds_mysql" {
 }
 
 output "ec2_public_dns" {
-  value = aws_instance.ec2.public_dns
+  value = [for s in aws_instance.ec2 : s]
 }
