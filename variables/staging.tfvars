@@ -9,7 +9,7 @@
 "mysql_port": 3306
 
 "ec2_instance_type": "t2.micro"
-"ec2_ssh_public_key_path" : "/home/vagrant/.ssh/id_ed25519.pub"
+"ec2_ssh_public_key_path" : "/home/tma/.ssh/id_ed25519.pub"
 "ec2_number_instance_launch" : 2
 
 "ebs_volumn_type" : "gp2"

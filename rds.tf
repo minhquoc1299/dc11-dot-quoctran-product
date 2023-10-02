@@ -1,4 +1,4 @@
-resource "aws_db_subnet_group" "database" {
+/* resource "aws_db_subnet_group" "database" {
   name       = "database-mysql-subnet-private-group"
   subnet_ids = local.subnet_private_ids
 
@@ -55,4 +55,4 @@ resource "aws_db_instance" "default" {
     name = "devops-rds-mysql"
   }
 
-} 
+}  */

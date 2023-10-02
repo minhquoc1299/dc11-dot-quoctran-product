@@ -15,10 +15,10 @@ output "ec2_ami" {
   value = data.aws_ami.ubuntu
 }
 
-output "rds_mysql" {
+/* output "rds_mysql" {
   sensitive = true
   value     = aws_db_instance.default
-}
+} */
 
 output "ec2_public_dns" {
   value = [for s in aws_instance.ec2 : s]

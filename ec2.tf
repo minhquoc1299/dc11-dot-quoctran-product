@@ -68,8 +68,7 @@ resource "aws_instance" "ec2" {
 
   count         = local.vars.ec2_number_instance_launch
   ami           = "ami-0df7a207adb9748c7" # data.aws_ami.ubuntu.id
-  instance_type = local.vars.ec2_instance_type
-
+  instance_type = local.vars.ec2_instance_type[count.index]
 
   network_interface {
     network_interface_id = aws_network_interface.ec2[count.index].id
@@ -104,5 +103,5 @@ resource "aws_eip" "ec2" {
 resource "aws_ec2_instance_state" "test" {
   count       = 2
   instance_id = aws_instance.ec2[count.index].id
-  state       = "running"
+  state       = "stopped"
 }
